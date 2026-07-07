@@ -76,6 +76,62 @@ body {
   color: var(--primary-color);
 }
 
+.mobile-nav-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 0.15rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobile-nav-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-nav-scroll {
+    width: 100%;
+    padding-inline: 0.1rem;
+  }
+}
+
+.services-nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid rgba(43, 162, 131, 0.3);
+  background: rgba(43, 162, 131, 0.1);
+  color: var(--primary-color);
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.services-nav-link:hover,
+.services-nav-link:focus-visible,
+.services-nav-link.active {
+  background: var(--primary-color);
+  color: #ffffff;
+  border-color: var(--primary-color);
+}
+
+.contact-link {
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-link > span:first-child {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.contact-link .break-all {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .site-section {
   padding: 5rem 0;
 }
