@@ -29,21 +29,24 @@
   <header class="site-header">
     <div
       class="container mx-auto flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between lg:px-10">
-      <div class="flex items-center justify-between gap-4 md:justify-start">
+      <div class="flex items-center justify-between gap-3 md:justify-start">
         <a href="#hero"
           class="inline-flex items-center gap-2 rounded-full px-1 py-1 text-lg font-semibold tracking-tight text-[var(--text-primary)]">
           <span class="h-3 w-3 rounded-full bg-[var(--primary-color)]"></span>
           Sami Ul Haq
         </a>
-        <button id="themeToggle" class="theme-toggle md:hidden" type="button" aria-label="Toggle theme"
-          aria-pressed="false">
-          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-          <span id="themeToggleLabel">Dark</span>
-        </button>
       </div>
 
       <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-end">
-        <nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium">
+        <div class="flex items-center justify-center gap-2 md:hidden">
+          <a href="services.html" class="site-link services-nav-link">Services</a>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span id="themeToggleLabel">Dark</span>
+          </button>
+        </div>
+        <nav
+          class="mobile-nav-scroll flex gap-x-5 overflow-x-auto pb-1 text-sm font-medium md:flex-wrap md:overflow-visible md:pb-0">
           <a href="#about" class="site-link">About</a>
           <a href="#education" class="site-link">Education</a>
           <a href="#experience" class="site-link">Experience</a>
@@ -52,11 +55,14 @@
           <a href="#certifications" class="site-link">Certifications</a>
           <a href="#contact" class="site-link">Contact</a>
         </nav>
-        <button id="themeToggleDesktop" class="theme-toggle hidden md:inline-flex" type="button"
-          aria-label="Toggle theme" aria-pressed="false">
-          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-          <span id="themeToggleDesktopLabel">Dark</span>
-        </button>
+        <div class="hidden items-center gap-2 md:flex">
+          <a href="services.html" class="site-link services-nav-link">Services</a>
+          <button id="themeToggleDesktop" class="theme-toggle" type="button" aria-label="Toggle theme"
+            aria-pressed="false">
+            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+            <span id="themeToggleDesktopLabel">Dark</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -390,7 +396,8 @@
               <span class="min-w-0"><span
                   class="block text-xs uppercase tracking-[0.2em] text-[var(--text-muted)]">Phone</span><span
                   class="block mt-1 text-base font-semibold sm:text-lg">+92 3117761815</span></span><span
-                class="text-sm text-[var(--primary-color)] sm:text-base">Call</span></div>
+                class="text-sm text-[var(--primary-color)] sm:text-base">Call</span>
+            </div>
           </div>
         </div>
       </div>
