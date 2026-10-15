@@ -207,6 +207,13 @@ body {
   border-radius: 1.25rem;
 }
 
+@media (max-width: 1023px) {
+  .hero-panel {
+    width: min(100%, 180px);
+    justify-self: center;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero-panel {
     width: min(100%, 347px);
