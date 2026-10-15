@@ -31,84 +31,63 @@
 <body class="antialiased">
   <header class="site-header">
     <div
-      class="container mx-auto flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between lg:px-10">
-      <div class="flex items-center justify-between gap-3 md:justify-start">
+      class="site-header__inner container mx-auto px-5 py-3 lg:px-10">
+      <div class="site-header__top">
         <a href="#hero"
           class="inline-flex items-center gap-2 rounded-full px-1 py-1 text-lg font-semibold tracking-tight text-[var(--text-primary)]">
           <span class="h-3 w-3 rounded-full bg-[var(--primary-color)]"></span>
           Sami Ul Haq
         </a>
-      </div>
 
-      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-end">
-        <div class="flex items-center justify-center gap-2 md:hidden">
+        <div class="header-actions flex items-center gap-2">
           <a href="services.html" class="site-link services-nav-link">Services</a>
           <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
             <span class="theme-toggle__icon" aria-hidden="true">◐</span>
             <span id="themeToggleLabel">Dark</span>
           </button>
         </div>
-        <nav
-          class="mobile-nav-scroll flex gap-x-5 overflow-x-auto pb-1 text-sm font-medium md:flex-wrap md:overflow-visible md:pb-0">
-          <a href="#about" class="site-link">About</a>
-          <a href="#education" class="site-link">Education</a>
-          <a href="#experience" class="site-link">Experience</a>
-          <a href="#skills" class="site-link">Skills</a>
-          <a href="#projects" class="site-link">Projects</a>
-          <a href="#certifications" class="site-link">Certifications</a>
-          <a href="#contact" class="site-link">Contact</a>
-        </nav>
-        <div class="hidden items-center gap-2 md:flex">
-          <a href="services.html" class="site-link services-nav-link">Services</a>
-          <button id="themeToggleDesktop" class="theme-toggle" type="button" aria-label="Toggle theme"
-            aria-pressed="false">
-            <span class="theme-toggle__icon" aria-hidden="true">◐</span>
-            <span id="themeToggleDesktopLabel">Dark</span>
-          </button>
-        </div>
       </div>
+      <nav class="mobile-nav-scroll flex gap-x-5 overflow-x-auto text-sm font-medium">
+        <a href="#about" class="site-link">About</a>
+        <a href="#education" class="site-link">Education</a>
+        <a href="#experience" class="site-link">Experience</a>
+        <a href="#skills" class="site-link">Skills</a>
+        <a href="#projects" class="site-link">Projects</a>
+        <a href="#certifications" class="site-link">Certifications</a>
+        <a href="#contact" class="site-link">Contact</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section id="hero" class="site-section hero-section lg:min-h-[calc(100svh-88px)]">
-      <div class="container mx-auto grid items-center gap-8 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
-        <div class="max-w-2xl">
-          <p class="section-eyebrow">Backend Engineer | Gujranwala, Pakistan</p>
-          <h1 class="section-heading mt-3 max-w-2xl text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">Sami
-            Ul Haq</h1>
+    <section id="hero" class="site-section hero-section">
+      <div
+        class="container mx-auto grid items-start gap-6 px-5 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-10 lg:px-10">
+        <div class="order-2 max-w-2xl lg:order-1">
+          <p class="section-eyebrow">Sami Ul Haq · Backend Engineer</p>
+          <h1 class="section-heading mt-3 max-w-2xl text-4xl font-extrabold tracking-tight md:text-5xl lg:text-6xl">
+            I build secure, reliable backend systems.
+          </h1>
           <p class="mt-4 max-w-xl text-base leading-7 text-[var(--text-secondary)] md:text-lg">
-            Results-driven Backend Engineer and BS Software Engineering graduate focused on secure APIs, microservices,
-            relational databases, and cloud deployment.
+            I build APIs and backend services with NestJS, TypeScript, PostgreSQL, and cloud platforms.
           </p>
 
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#experience" class="btn-primary">View Experience</a>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="#projects" class="btn-primary">Explore Projects</a>
             <a href="https://docs.google.com/document/d/1ONCIJWN_ehqRoFP-iKze0Qu6w76vOGUe7nYPGASYoEE/edit?usp=sharing"
               class="btn-secondary" target="_blank" rel="noopener">View Resume</a>
           </div>
 
-          <div class="mt-6 flex flex-wrap gap-2 text-sm text-[var(--text-secondary)]">
+          <div class="mt-5 flex flex-wrap gap-2 text-sm text-[var(--text-secondary)]">
             <span class="tag">NestJS</span>
             <span class="tag">TypeScript</span>
             <span class="tag">PostgreSQL</span>
-            <span class="tag">GCP</span>
-            <span class="tag">Azure</span>
           </div>
         </div>
 
-        <div class="portfolio-card hero-panel p-4 sm:p-5 md:p-6 lg:p-7">
-          <img src="assets/images/photos/sami.jpg" alt="Sami Ul Haq" class="hero-image" />
-          <div class="mt-4 grid gap-3 sm:grid-cols-2">
-            <div class="mini-stat"><span class="mini-stat__label">Focus</span><span class="mini-stat__value">Backend
-                systems</span></div>
-            <div class="mini-stat"><span class="mini-stat__label">Stack</span><span class="mini-stat__value">NestJS,
-                TS, SQL</span></div>
-            <div class="mini-stat"><span class="mini-stat__label">Cloud</span><span class="mini-stat__value">GCP,
-                Azure</span></div>
-            <div class="mini-stat"><span class="mini-stat__label">Contact</span><span class="mini-stat__value"><a
-                  href="mailto:samiulhaq.inbox@gmail.com" class="site-link">Email</a></span></div>
-          </div>
+        <div class="portfolio-card hero-panel order-1 p-3 sm:p-4 lg:order-2">
+          <img src="assets/images/photos/sami_white_bg.jpg" alt="Portrait of Sami Ul Haq" class="hero-image" width="629"
+            height="839" fetchpriority="high" />
         </div>
       </div>
     </section>
